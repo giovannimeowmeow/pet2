@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore pet collections and find friendly, practical care information with PawPedia.">
+  <title>PawPedia — Discover the Wonderful World of Pets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="PawPedia home">
+        <span class="brand-mark" aria-hidden="true">🐾</span>
+        <span>Paw<span class="brand-accent">Pedia</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#collections">Pet Collections</a>
+        <a href="#care">Pet Care</a>
+        <a href="#about">About Us</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <p class="eyebrow">A little more joy, every day</p>
+        <h1>Discover the<br>Wonderful World of Pets</h1>
+        <p class="hero-copy">
+          Meet amazing companions, learn what makes them special, and find
+          practical tips to help every pet thrive.
+        </p>
+        <a class="button button-primary" href="#collections">
+          Explore Pets <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <a class="hero-credit" href="https://unsplash.com/" target="_blank" rel="noreferrer">Photo: Unsplash</a>
+    </section>
+
+    <section class="section intro-section">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">Welcome to PawPedia</p>
+          <h2>Good things happen when we understand our pets.</h2>
+        </div>
+        <p class="intro-copy">
+          PawPedia is a friendly guide to six much-loved pet groups. Browse
+          realistic introductions, compare everyday care needs, and use our
+          guide as a starting point for responsible pet ownership.
+        </p>
+      </div>
+    </section>
+
+    <section class="section collections-section" id="collections">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Find your kind of companion</p>
+            <h2>Explore pet collections</h2>
+            <p>Search by name or choose a category to narrow the collection.</p>
+          </div>
+        </div>
+
+        <div class="collection-controls">
+          <label class="search-field">
+            <span class="sr-only">Search pets by name</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="pet-search" type="search" placeholder="Search pets…" autocomplete="off">
+          </label>
+          <label class="filter-field">
+            <span class="sr-only">Filter pets by category</span>
+            <select id="category-filter">
+              <option value="all">All categories</option>
+              <option value="Dogs">Dogs</option>
+              <option value="Cats">Cats</option>
+              <option value="Rabbits">Rabbits</option>
+              <option value="Birds">Birds</option>
+              <option value="Fish">Fish</option>
+              <option value="Hamsters">Hamsters</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="category-pills" aria-label="Browse by category">
+          <button class="category-pill active" type="button" data-category="all">All pets</button>
+          <button class="category-pill" type="button" data-category="Dogs">Dogs</button>
+          <button class="category-pill" type="button" data-category="Cats">Cats</button>
+          <button class="category-pill" type="button" data-category="Rabbits">Rabbits</button>
+          <button class="category-pill" type="button" data-category="Birds">Birds</button>
+          <button class="category-pill" type="button" data-category="Fish">Fish</button>
+          <button class="category-pill" type="button" data-category="Hamsters">Hamsters</button>
+        </div>
+
+        <p id="results-count" class="results-count" aria-live="polite"></p>
+        <div id="pet-grid" class="pet-grid"></div>
+        <p id="no-results" class="no-results" hidden>No pets match that search. Try another name or category.</p>
+
+        <section class="section pet-topics" id="pet-topics" aria-labelledby="pet-topics-title">
+          <div class="section-heading centered">
+            <p class="eyebrow">Pet collections at a glance</p>
+            <h2 id="pet-topics-title">About Pet Collections</h2>
+          </div>
+
+          <div class="care-grid">
+            <article class="care-card">
+              <span class="care-icon" aria-hidden="true">🐾</span>
+              <h3>About</h3>
+              <p>
+                Pet collections are organised groups of animals based on species,
+                behaviour, housing needs, diet, and daily care requirements.
+                Grouping pets by category helps people compare their needs and
+                choose companions that fit their lifestyle. PawPedia introduces
+                dogs, cats, rabbits, birds, fish, and hamsters.
+              </p>
+            </article>
+
+            <article class="care-card">
+              <span class="care-icon" aria-hidden="true">📚</span>
+              <h3>Facts &amp; Myths</h3>
+              <p>
+                <strong>Fact:</strong> Pets have different needs for space,
+                attention, and enrichment. <strong>Myth:</strong> Small pets are
+                always low-maintenance. Rabbits and hamsters still need suitable
+                habitats and regular care. <strong>Fact:</strong> Fish need
+                suitable water conditions, not just a tank. Every species has
+                its own behaviour and care requirements.
+              </p>
+            </article>
+
+            <article class="care-card">
+              <span class="care-icon" aria-hidden="true">💡</span>
+              <h3>Why It Is Important</h3>
+              <p>
+                Understanding the differences between pets helps people prepare
+                appropriate homes and provide responsible care. It can reduce
+                misunderstandings about animal behaviour, support animal
+                welfare, and help owners build healthy relationships with their
+                companions.
+              </p>
+            </article>
+
+            <article class="care-card">
+              <span class="care-icon" aria-hidden="true">🧺</span>
+              <h3>Collections Draft</h3>
+              <p>
+                Dogs are often active companions; cats need play and safe places
+                to explore; rabbits need room to hop and appropriate hay; birds
+                benefit from social interaction and enrichment; fish need
+                carefully maintained water; and hamsters need secure habitats
+                with space to burrow and explore.
+              </p>
+            </article>
+
+            <article class="care-card">
+              <span class="care-icon" aria-hidden="true">✅</span>
+              <h3>Actions by Consumer</h3>
+              <p>
+                Before adopting, research the animal’s needs, consider whether
+                they fit your lifestyle, and prepare a safe habitat. Plan for
+                food, enrichment, and veterinary care, and consider adoption
+                from a reputable shelter or rescue. Responsible ownership
+                includes ongoing learning and daily care.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section popular-section">
+      <div class="container popular-banner">
+        <div>
+          <p class="eyebrow">A thoughtful choice is a happy choice</p>
+          <h2>Every pet has its own kind of magic.</h2>
+          <p>
+            Before welcoming a companion home, learn about its space, diet,
+            lifespan, and daily care needs.
+          </p>
+          <a class="button button-light" href="#care">Read the care guide</a>
+        </div>
+        <div class="popular-emoji" aria-hidden="true">🐶 🐱 🐰</div>
+      </div>
+    </section>
+
+    <section class="section care-section" id="care">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">Small routines, big difference</p>
+          <h2>Pet care basics</h2>
+          <p>Every species is different. Ask a veterinarian for advice tailored to your pet.</p>
+        </div>
+
+        <div class="care-grid">
+          <article class="care-card">
+            <span class="care-icon" aria-hidden="true">🥣</span>
+            <h3>Feeding</h3>
+            <p>Choose a complete, species-appropriate diet. Follow portion guidance and keep fresh water available.</p>
+          </article>
+          <article class="care-card">
+            <span class="care-icon" aria-hidden="true">🧼</span>
+            <h3>Grooming</h3>
+            <p>Brush coats and check nails, ears, and teeth regularly. Use grooming methods suited to your pet.</p>
+          </article>
+          <article class="care-card">
+            <span class="care-icon" aria-hidden="true">🎾</span>
+            <h3>Exercise &amp; enrichment</h3>
+            <p>Provide safe movement, play, and activities that keep your pet’s body and mind engaged.</p>
+          </article>
+          <article class="care-card">
+            <span class="care-icon" aria-hidden="true">🧹</span>
+            <h3>Hygiene</h3>
+            <p>Keep sleeping, feeding, and toileting areas clean. Use safe products and avoid sudden changes.</p>
+          </article>
+          <article class="care-card">
+            <span class="care-icon" aria-hidden="true">🩺</span>
+            <h3>Veterinary care</h3>
+            <p>Arrange routine check-ups and ask a veterinarian about vaccinations, parasite prevention, and concerns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section media-section">
+      <div class="container media-grid">
+        <div class="media-copy">
+          <p class="eyebrow">A moment of pawsitivity</p>
+          <h2>Pause for a tiny meow</h2>
+          <p>This short, synthesized cat-like sound is generated by the page. Press play to hear it.</p>
+          <audio id="meow-audio" controls aria-label="Synthesized cat meow audio">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ?rel=0"
+              title="Big Buck Bunny animated short"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <p>Watch an animated rabbit adventure. Video controls are available in the player.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">The people behind PawPedia</p>
+          <h2>Meet our group</h2>
+          <p>Replace the sample details below with your group’s confirmed information.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Placeholder profile portrait for group member one">
+            <h3>Member One</h3>
+            <p>Full name: <strong>[Add full name]</strong></p>
+            <p>Student ID: <strong>[Add student ID]</strong></p>
+          </article>
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Placeholder profile portrait for group member two">
+            <h3>Member Two</h3>
+            <p>Full name: <strong>[Add full name]</strong></p>
+            <p>Student ID: <strong>[Add student ID]</strong></p>
+          </article>
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Placeholder profile portrait for group member three">
+            <h3>Member Three</h3>
+            <p>Full name: <strong>[Add full name]</strong></p>
+            <p>Student ID: <strong>[Add student ID]</strong></p>
+          </article>
+        </div>
+
+        <p class="group-note">
+          <strong>Group name:</strong> [Add your group name] · CMPF 123: Introduction to Web Development
+        </p>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="container feedback-layout">
+        <div>
+          <p class="eyebrow">We’d love to hear from you</p>
+          <h2>Send us your feedback</h2>
+          <p>Have a suggestion, complaint, or enquiry? Complete the form. Required fields must be filled in.</p>
+          <p class="form-note">Your submission is checked in your browser and again by the PHP server.</p>
+        </div>
+
+        <form class="feedback-form" action="feedback.php" method="post">
+          <div class="form-row">
+            <label for="name">Name <span aria-hidden="true">*</span>
+              <input id="name" name="name" type="text" required maxlength="100" autocomplete="name">
+            </label>
+            <label for="email">Email <span aria-hidden="true">*</span>
+              <input id="email" name="email" type="email" required maxlength="254" autocomplete="email">
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Gender <span aria-hidden="true">*</span></legend>
+            <label class="radio-label"><input type="radio" name="gender" value="Female" required> Female</label>
+            <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
+            <label class="radio-label"><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+          </fieldset>
+
+          <div class="form-row">
+            <label for="feedback-type">Type of feedback <span aria-hidden="true">*</span>
+              <select id="feedback-type" name="feedback_type" required>
+                <option value="">Choose one</option>
+                <option value="Suggestion">Suggestion</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Enquiry">Enquiry</option>
+              </select>
+            </label>
+            <label for="submitted-at">Date and time <span aria-hidden="true">*</span>
+              <input id="submitted-at" name="submitted_at" type="datetime-local" required>
+            </label>
+          </div>
+
+          <label for="message">Feedback <span aria-hidden="true">*</span>
+            <textarea id="message" name="message" rows="5" required maxlength="3000"></textarea>
+          </label>
+
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <button class="button button-primary" type="submit">
+            Submit feedback <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">🐾</span>
+          <span>Paw<span class="brand-accent">Pedia</span></span>
+        </a>
+        <p>A friendly starting point for discovering pets and learning about responsible care.</p>
+      </div>
+
+      <div>
+        <h2>Quick links</h2>
+        <a href="#collections">Pet collections</a>
+        <a href="#care">Pet care</a>
+        <a href="#about">About us</a>
+        <a href="#feedback">Feedback</a>
+      </div>
+
+      <div>
+        <h2>Say hello</h2>
+        <a href="mailto:hello@pawpedia.example">hello@pawpedia.example</a>
+        <p>Founder / website creator: [Add name]</p>
+      </div>
+
+      <div>
+        <h2>Follow along</h2>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a>
+        <p class="social-note">Replace these links with your group’s profiles if available.</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> PawPedia. University group project.</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog id="pet-dialog" class="pet-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close details">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
